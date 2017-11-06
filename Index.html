@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>El Salvador</title>
+    <link href="https://fonts.googleapis.com/css?family=Frijole|Indie+Flower|Slackey" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/estilo.css"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/menu.js"></script>
+
+</head>
+<body>
+
+    <header>
+        <div class="menu_bar">
+            <a href="#" class="bt-menu"><span class="icon-list2"></span>Menú</a>
+        </div>
+ 
+        <nav>
+            <ul>
+                <li><a href="#"><span class="icon-house"></span>Inicio</a></li>
+                <li class="submenu">
+                    <a href="#"><span class="icon-rocket"></span>Zona Occidental<span class="caret icon-arrow-down6"></span></a>
+                    <ul class="children">
+                        <li><a href="Ahuchapan.html">Ahuachapán <span class="icon-dot"></span></a></li>
+                        <li><a href="Sonsonate.html">Sonsonate<span class="icon-dot"></span></a></li>
+                        <li><a href="Santa Ana.html">Santa Ana<span class="icon-dot"></span></a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#"><span class="icon-rocket"></span>Zona Central<span class="caret icon-arrow-down6"></span></a>
+                    <ul class="children">
+                        <li><a href="Cabañas.html">Cabañas<span class="icon-dot"></span></a></li>
+                        <li><a href="Chalatenango.html">Chalatenango<span class="icon-dot"></span></a></li>
+                        <li><a href="Cuscatlán.html">Cuscatlán<span class="icon-dot"></span></a></li>
+                        <li><a href="La Libertad.html">La Libertad<span class="icon-dot"></span></a></li>
+                        <li><a href="La Paz.html">La Paz<span class="icon-dot"></span></a></li>
+                        <li><a href="San Salvador.html">San Salvador<span class="icon-dot"></span></a></li>
+                        <li><a href="San Vicente.html">San Vicente<span class="icon-dot"></span></a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#"><span class="icon-rocket"></span>Zona Oriental<span class="caret icon-arrow-down6"></span></a>
+                    <ul class="children">
+                        <li><a href="Morazán.html">Morazán<span class="icon-dot"></span></a></li>
+                        <li><a href="San Miguel.html">San Miguel<span class="icon-dot"></span></a></li>
+                        <li><a href="Usulután.html">Usulután<span class="icon-dot"></span></a></li>
+                        <li><a href="La Unión.html">La Unión<span class="icon-dot"></span></a></li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                	<a href="formulario.html"><span class="icon-rocket"></span>Formulario de Contacto<span class="caret icon-arrow-down6"></span></a>
+               </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="title"> <h4>Mapa De El Salvador</h4></div>
+   
+
+    <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        margin-top: 10%;
+        margin-left: 20%;
+        height: 60%;
+        width: 50%
+      }
+      /* Optional: Makes the sample page fill the window.  https://www.youtube.com/watch?v=hSsOCbG6LQI */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+      var map;
+      var dataGlobal = [
+
+        {lugar: "San Salvador", 
+        coordenadas: {lat: 13.6914757, lng: -89.2497135}, 
+        poblacion: '2 557 761',
+        superficie: '886.2 km²' ,
+        fiestas : 'Del 5 y 6 de agosto' },
+
+        {lugar: "Sonsonate", 
+        coordenadas: {lat: 13.7104058, lng: -89.7650393}, 
+        poblacion: '72 158',
+        superficie: '1,226 km²' ,
+        fiestas : 'Del 25 de enero al 2 de febrero, en honor a la Virgen de Candelaria.'},
+
+        {lugar: "Ahuachapan", 
+        coordenadas: {lat: 13.9292242, lng: -89.9135291}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "Cuscatlan", 
+        coordenadas: {lat: 13.8538766, lng: -89.1567516}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "La Libertad", 
+        coordenadas: {lat: 13.741396, lng: -89.6593864}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "Santa Ana", 
+        coordenadas: {lat: 13.9837927, lng: -89.580331}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "Chalatenango", 
+        coordenadas: {lat: 14.1763398, lng: -89.3373805}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "Cabañas", 
+        coordenadas: {lat: 13.8793472, lng: -88.8809545}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "San Vicente", 
+        coordenadas: {lat: 13.640587, lng: -88.801431}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "La Paz", 
+        coordenadas: {lat: 13.4662297, lng: -89.1122736}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "Usulután", 
+        coordenadas: {lat: 13.4220199, lng: -88.7483296}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "San Miguel", 
+        coordenadas: {lat: 13.4785149, lng: -88.2041088}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "Morazán", 
+        coordenadas: {lat: 13.746818, lng: -88.2418026}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+        {lugar: "La Unión", 
+        coordenadas: {lat: 13.5238628, lng: -88.1666351}, 
+        poblacion: '118,164',
+        superficie: '244.8 km2' ,
+        fiestas : 'Del 30 de enero al 14 de febrero'},
+
+      ];
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat:13.8249474, lng: -88.7205263},
+          zoom: 8
+        });
+        var markers = [];
+        for(var i = 0 ; i < dataGlobal.length ; i++){
+          var marker = new google.maps.Marker({
+            position: dataGlobal[i].coordenadas,
+            map: map,
+            title: dataGlobal[i].lugar,
+            animation: google.maps.Animation.BOUNCE //BOUNCE
+          });
+          crearEventoMarker(marker, dataGlobal[i]);
+        }
+      }
+
+      function crearEventoMarker(marker, departamento) {
+          //info window
+        var infowindow = new google.maps.InfoWindow({
+          content: [
+          'Longitud territorial : '+departamento.poblacion,
+          'Fiestas patronales : ' + departamento.fiestas,
+          'Poblacion : ' + departamento.poblacion
+        ].join('<br>')
+        });
+          //Evento Marker
+        marker.addListener('click', function() {
+          infowindow.open(marker.get('map'), marker);
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCark6tffbX9wVrednCzir6p2hxWzN1_wY&callback=initMap"
+    async defer></script>
+
+
+
+      
+<footer>
+<div id="pie">
+    <div id="redes">
+        <a href="#"><img src="img/redes/facebook.png" width="82" height="82" alt="Facebook"></a>
+        <a href="#"><img src="img/redes/twitter.png" width="82" height="82" alt="Twitter"></a>
+        <a href="#"><img src="img/redes/youtube.png" width="82" height="82" alt="YouTube"></a>
+        <a href="#"><img src="img/redes/wordpress.png" width="82" height="82" alt="Blog AdobeXpert"></a>
+        <a href="#"><img src="img/redes/rss.png" width="82" height="82" alt="RSS"></a>
+    </div>
+    <div id="notas">
+        </br><p> Universidad Don Bosco 2017®</p>
+    </div>
+</div>
+</footer>
+
+
+</body>
+</html>
